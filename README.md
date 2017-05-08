@@ -1,5 +1,4 @@
-# simple-lamp
-Simple LAMP Web Application
+# Simple LAMP Web Application
 
 If you are using Ubuntu 14.04, install the following software:
 

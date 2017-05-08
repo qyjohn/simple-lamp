@@ -18,7 +18,7 @@ $ sudo apt-get install apache2 php libapache2-mod-php php-mcrypt php-mysql php-c
 $ sudo service apache2 restart
 ~~~~
 
-Then we clone the source code from git repository:
+Then we clone the source code from git repository. Here we assume that you are using "ubuntu:ubuntu" as the Linux username and group name. 
 
 ~~~~
 $ cd /var

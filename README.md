@@ -32,9 +32,9 @@ Then we create a MySQL database and a MySQL user for our demo. Here we use “we
 
 ~~~~
 $ mysql -u root -p
-mysql> CREATE DATABASE web_demo;
+mysql> CREATE DATABASE simple_lamp;
 mysql> CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
-mysql> GRANT ALL PRIVILEGES ON web_demo.* TO 'username'@'localhost';
+mysql> GRANT ALL PRIVILEGES ON simple_lamp.* TO 'username'@'localhost';
 mysql> quit
 ~~~~
 
@@ -42,7 +42,7 @@ In the code you clone from Github, we have pre-populated some demo data as examp
 
 ~~~~
 $ cd /var/www/html/simple-lamp
-$ mysql -u username -p web_demo < web_demo.sql
+$ mysql -u username -p simple_lamp < simple_lamp.sql
 ~~~~
 
 Before we can make it work, there are some minor modifications needed:

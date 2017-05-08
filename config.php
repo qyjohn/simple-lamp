@@ -14,5 +14,5 @@ $latency = 0;
 
 // Cache configuration
 $enable_cache = false;
-$cache_server = "[dns-endpoint-of-your-elasticache-memcached-instance]";
+$cache_server = "dns-or-ip-of-memcached-server";
 ?>

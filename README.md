@@ -70,3 +70,11 @@ Then you need to restart Apache on both web servers to make the new configuratio
 $ sudo service apache2 restart
 ~~~~
 
+To enable front page caching using MemCached, edit config.php and update the following line:
+
+~~~~
+// Cache configuration
+$enable_cache = true;
+$cache_server = "dns-or-ip-of-memcached-server";
+~~~~
+

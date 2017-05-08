@@ -5,7 +5,7 @@ If you are using Ubuntu 14.04, install the following software:
 ~~~~
 $ sudo apt-get update
 $ sudo apt-get install git mysql-server
-$ sudo apt-get install apache2 php5 php5-mysql php5-curl
+$ sudo apt-get install apache2 php5 php5-mysql php5-curl php5-memcached
 $ sudo service apache2 restart
 ~~~~
 
@@ -56,3 +56,17 @@ $ sudo chown -R www-data:www-data uploads
 ~~~~
 
 In your browser, browse to http://ip-address/simple-lamp/index.php. You should see that our application is now working. 
+
+To enable session sharing using MemCached, edit /etc/php5/apache2/php.ini (Ubuntu 14.04) or /etc/php/7.0/apache2/php.ini (Ubuntu 16.04), with the following modifications:
+
+~~~~
+session.save_handler = memcached
+session.save_path = "dns-or-ip-of-memcached-server:11211"
+~~~~
+
+Then you need to restart Apache on both web servers to make the new configuration effective.
+
+~~~~
+$ sudo service apache2 restart
+~~~~
+

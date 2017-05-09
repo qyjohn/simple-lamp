@@ -8,7 +8,7 @@
 include("config.php");
 session_start();
 $server   = $_SERVER['SERVER_ADDR'];
-$db = open_db_connection($db_hostname, $db_database, $db_username, $db_password);
+$db = open_db_connection($db_hostname, $db_port, $db_database, $db_username, $db_password);
 
 // Simulate latency 
 sleep($latency);
@@ -92,10 +92,10 @@ function save_upload_to_hd($uploadedFile, $folder)
 	return $key;
 }
 
-function open_db_connection($hostname, $database, $username, $password)
+function open_db_connection($hostname, $port, $database, $username, $password)
 {
 	// Open a connection to the database
-	$db = new PDO("mysql:host=$hostname;dbname=$database;charset=utf8", $username, $password);
+	$db = new PDO("mysql:host=$hostname;port=$port;dbname=$database;charset=utf8", $username, $password);
 	return $db;
 }
 

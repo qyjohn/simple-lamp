@@ -3,7 +3,7 @@
 $db_hostname = "localhost";
 $db_port     = 3306;
 $db_database = "simple_lamp";
-$db_username = "username";
+$db_username = "user";
 $db_password = "password";
 
 // Image upload options

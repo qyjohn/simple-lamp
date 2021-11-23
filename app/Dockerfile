@@ -8,6 +8,6 @@ COPY . /var/www/html/app/
 
 WORKDIR /var/www/html/app/
 
-EXPOSE 80 3306
+EXPOSE 80
 
 CMD ["./startup.sh"]

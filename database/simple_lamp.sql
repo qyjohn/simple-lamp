@@ -1,6 +1,6 @@
 CREATE DATABASE IF NOT EXISTS simple_lamp ;
-CREATE USER IF NOT EXISTS 'user'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON simple_lamp.* TO 'user'@'localhost';
+CREATE USER IF NOT EXISTS 'user'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON simple_lamp.* TO 'user'@'%';
 
 USE simple_lamp;
 DROP TABLE IF EXISTS `upload_images`;
